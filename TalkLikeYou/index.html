@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project page for TalkLikeYou, a real-time framework for speaking-habit imitation in talking head generation.">
+  <meta name="keywords" content="TalkLikeYou, talking head generation, speaking habit imitation, flow matching">
+  <title>TalkLikeYou</title>
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+  <main>
+    <header class="paper-header">
+      <div class="header-glow" aria-hidden="true"></div>
+      <div class="container">
+        <h1>Talk Like You: Imitating How You Speak in Real-Time Talking Head <span class="title-tail">Generation <img class="title-icon" src="static/images/talklikeyou-icon.png" alt="" aria-hidden="true"></span></h1>
+
+        <div class="authors" aria-label="Authors">
+          <span><a href="https://scholar.google.cz/citations?user=pBF9Mn8AAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank" rel="noopener noreferrer">Baiqin Wang</a><sup>1,2</sup></span>
+          <span>Zhixing Ding<sup>1,2</sup></span>
+          <span>Jijie Li<sup>1,2</sup></span>
+          <span>Jiankuo Zhao<sup>1,2</sup></span>
+          <span><a href="https://scholar.google.cz/citations?hl=zh-CN&amp;user=cuJ3QG8AAAAJ" target="_blank" rel="noopener noreferrer">Zhen Lei</a><sup>1,2,3,4</sup></span>
+          <span><a href="https://xiangyuzhu-open.github.io/homepage/" target="_blank" rel="noopener noreferrer">Xiangyu Zhu</a><sup>1,2</sup></span>
+        </div>
+
+        <div class="affiliations" aria-label="Affiliations">
+          <p><sup>1</sup> MAIS, Institute of Automation, Chinese Academy of Sciences</p>
+          <p><sup>2</sup> School of Artificial Intelligence, University of Chinese Academy of Sciences</p>
+          <p><sup>3</sup> CAIR, HKISI, Chinese Academy of Sciences</p>
+          <p><sup>4</sup> SCSE, FIE, M.U.S.T.</p>
+        </div>
+
+        <div class="publication-links" aria-label="Publication links">
+          <span class="publication-link is-disabled" aria-label="Paper coming soon">
+            <span>Paper (Coming Soon)</span>
+          </span>
+          <span class="publication-link is-disabled" aria-label="Code coming soon">
+            <span>Code (Coming Soon)</span>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <section class="section visual-section hero-visual" aria-label="TalkLikeYou overview">
+      <div class="container content-width">
+        <figure class="figure-card">
+          <div class="image-frame">
+            <img src="static/images/overview.png" alt="Overview of TalkLikeYou for speaking-habit imitation in talking head generation">
+          </div>
+          <figcaption>
+            <strong>Overview of TalkLikeYou.</strong>
+            Previous methods often generate uniform motions with limited control over speaking habits. We propose TalkLikeYou for efficient habit imitation in talking head generation, together with a new metric, PLAD, to evaluate habit similarity and diversity.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section abstract-section" aria-labelledby="abstract-title">
+      <div class="container reading-width">
+        <div class="section-heading">
+          <p class="eyebrow">Paper</p>
+          <h2 id="abstract-title">Abstract</h2>
+        </div>
+        <p class="abstract">
+          In daily life, each person exhibits unique speaking habits, leading to subtle yet consistent lip-shape variations even when pronouncing the same word. Although recent talking head generation methods have achieved impressive visual fidelity and lip synchronization, they largely overlook user-specific customization, especially the motion patterns that characterize individual speaking habits. These habits are difficult to model and capture, as their motion patterns are highly fine-grained and often similar across individuals. As a result, many approaches produce overly uniform facial motions and fail to capture diverse, person-specific articulation patterns. To address this, we propose TalkLikeYou, an efficient framework that imitates how a target person speaks in talking head generation. Our method models habit in motion-space and achieves real-time performance through Flow Matching with only one sampling step during inference. We further adopt a two-stage imitation learning strategy to capture subtle distinctions between habits, allowing users to specify a target habit through either a preset style from the dataset or a reference video. In addition, we introduce a new metric PLAD that projects mouth motions onto representative articulation axes to evaluate imitation accuracy and generation diversity. Extensive experiments demonstrate that TalkLikeYou generates high-quality talking heads in real-time and significantly improves speaking habit imitation compared with prior methods.
+        </p>
+      </div>
+    </section>
+
+    <section class="section demo-section" aria-labelledby="introduction-title">
+      <div class="container content-width">
+        <div class="section-heading">
+          <p class="eyebrow">TalkLikeYou</p>
+          <h2 id="introduction-title">Introduction</h2>
+        </div>
+        <div class="video-frame">
+          <video controls playsinline preload="metadata">
+            <source src="static/videos/demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section visual-section method-section" aria-labelledby="method-title">
+      <div class="container content-width">
+        <div class="section-heading">
+          <p class="eyebrow">TalkLikeYou</p>
+          <h2 id="method-title">Method</h2>
+        </div>
+        <figure class="figure-card">
+          <div class="image-frame">
+            <img src="static/images/framework.png" alt="The TalkLikeYou framework">
+          </div>
+          <figcaption>
+            <strong>Framework of TalkLikeYou.</strong>
+            Our method first generates habit-aware motion using the Flow Matching Motion Generator with optional habit sources through one-step sampling, and then renders the motion into a video. We further adopt a two-stage habit imitation learning strategy for more generalized and stable habit imitation. In the unified habit space, stars denote one-hot habit codes and dots denote reference-video samples. During the first training stage, we use an alignment loss between reference-video features and their corresponding one-hot habit codes.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section comparison-section" aria-labelledby="comparison-title">
+      <div class="container content-width">
+        <div class="section-heading">
+          <p class="eyebrow">Evaluation</p>
+          <h2 id="comparison-title">Comparison</h2>
+        </div>
+
+        <article class="media-card comparison-carousel" aria-labelledby="lip-sync-title">
+          <div class="media-card-heading">
+            <div>
+              <h3 id="lip-sync-title">Lip-Sync Comparison</h3>
+              <p>Use the arrows to switch between the two comparison examples.</p>
+            </div>
+            <div class="carousel-controls" aria-label="Lip-sync comparison controls">
+              <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous lip-sync comparison">&#8592;</button>
+              <span class="carousel-status" aria-live="polite"><span data-carousel-current>1</span> / 2</span>
+              <button class="carousel-button" type="button" data-carousel-next aria-label="Next lip-sync comparison">&#8594;</button>
+            </div>
+          </div>
+          <div class="carousel-stage">
+            <video class="carousel-video is-active" controls playsinline preload="metadata" data-carousel-item>
+              <source src="static/videos/comparison/lip-sync-1.mp4" type="video/mp4">
+            </video>
+            <video class="carousel-video" controls playsinline preload="metadata" data-carousel-item hidden>
+              <source src="static/videos/comparison/lip-sync-2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </article>
+
+        <article class="media-card" aria-labelledby="habit-comparison-title">
+          <div class="media-card-heading">
+            <div>
+              <h3 id="habit-comparison-title">Speaking-Habit Comparison</h3>
+              <p>Comparison of target speaking-habit imitation across methods.</p>
+            </div>
+          </div>
+          <div class="media-video-frame media-video-frame-wide">
+            <video controls playsinline preload="metadata">
+              <source src="static/videos/comparison/habit-comparison.mp4" type="video/mp4">
+            </video>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section case-section" aria-labelledby="case-title">
+      <div class="container content-width">
+        <div class="section-heading">
+          <p class="eyebrow">Results</p>
+          <h2 id="case-title">Case</h2>
+        </div>
+        <div class="case-grid">
+          <article class="media-card compact-card">
+            <div class="media-card-heading">
+              <div>
+                <h3>Speaking-Habit Results</h3>
+                <p>Generated examples with different target speaking habits.</p>
+              </div>
+            </div>
+            <div class="media-video-frame">
+              <video controls playsinline preload="metadata">
+                <source src="static/videos/cases/habit-result.mp4" type="video/mp4">
+              </video>
+            </div>
+          </article>
+
+          <article class="media-card compact-card">
+            <div class="media-card-heading">
+              <div>
+                <h3>Stylized Results</h3>
+                <p>TalkLikeYou applied to stylized source portraits.</p>
+              </div>
+            </div>
+            <div class="media-video-frame media-video-frame-wide">
+              <video controls playsinline preload="metadata">
+                <source src="static/videos/cases/stylized-result.mp4" type="video/mp4">
+              </video>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container reading-width">
+      <p>
+        This page was built using the
+        <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>,
+        adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a> project page.
+        You are free to borrow the source code of this website; we only ask that you link back to this page in the footer.
+        This website is licensed under a
+        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </footer>
+  <script src="static/js/index.js"></script>
+</body>
+</html>
