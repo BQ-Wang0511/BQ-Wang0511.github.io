@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project page for InterTalk, accepted to ECCV 2026.">
+  <meta name="keywords" content="InterTalk, talking face, conversational interaction, ECCV 2026">
+  <title>InterTalk | ECCV 2026</title>
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+  <main>
+    <header class="paper-header">
+      <div class="header-glow" aria-hidden="true"></div>
+      <div class="container">
+        <p class="venue">Accepted to ECCV 2026</p>
+        <h1>
+          Towards Flexible, Natural, Efficient Interaction for Conversational Talking Face
+          <span class="title-tail">Generation <img class="title-icon" src="static/images/fig-transparent.png" alt="" aria-hidden="true"></span>
+        </h1>
+
+        <div class="authors" aria-label="Authors">
+          <span>Baiqin Wang<sup>1,2</sup></span>
+          <span>Sen Chen<sup>1,2</sup></span>
+          <span>Jiankuo Zhao<sup>1,2</sup></span>
+          <span>Xiangyu Liu<sup>1,2</sup></span>
+          <span><a href="https://scholar.google.cz/citations?hl=zh-CN&amp;user=cuJ3QG8AAAAJ" target="_blank" rel="noopener noreferrer">Zhen Lei</a><sup>1,2,3,4</sup></span>
+          <span><a href="https://xiangyuzhu-open.github.io/homepage/" target="_blank" rel="noopener noreferrer">Xiangyu Zhu</a><sup>1,2,*</sup></span>
+        </div>
+
+        <div class="affiliations" aria-label="Affiliations">
+          <p><sup>1</sup> MAIS, Institute of Automation, Chinese Academy of Sciences</p>
+          <p><sup>2</sup> School of Artificial Intelligence, University of Chinese Academy of Sciences</p>
+          <p><sup>3</sup> CAIR, HKISI, Chinese Academy of Sciences</p>
+          <p><sup>4</sup> SCSE, FIE, M.U.S.T</p>
+          <p class="corresponding"><sup>*</sup> Corresponding author</p>
+        </div>
+
+        <div class="publication-links" aria-label="Publication links">
+          <a class="publication-link" href="https://arxiv.org/abs/2606.31088" target="_blank" rel="noopener noreferrer">
+            <span>arXiv</span>
+          </a>
+          <a class="publication-link" href="https://mp.weixin.qq.com/s/udKPOLMvayRnuUx6WHBaFw" target="_blank" rel="noopener noreferrer">
+            <span>WeChat</span>
+          </a>
+          <span class="publication-link is-disabled" aria-label="Code coming soon">
+            <span>Code (Coming Soon)</span>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <section class="section visual-section hero-visual" aria-label="InterTalk overview">
+      <div class="container content-width">
+        <figure class="figure-card">
+          <div class="image-frame">
+            <img src="static/images/firstpic.png" alt="Overview of InterTalk for conversational talking face generation">
+          </div>
+          <figcaption>
+            <strong>Illustration of InterTalk.</strong>
+            InterTalk generates conversational talking face with flexible and natural interactions in real-time. (a) For a single participant, it generates an interactive talking face capable of multi-round dialogues with seamless role switching. (b) For multiple participants, it produces coherent talking-face videos within a shared scene, capturing realistic group interactions.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section abstract-section" aria-labelledby="abstract-title">
+      <div class="container reading-width">
+        <div class="section-heading">
+          <p class="eyebrow">Paper</p>
+          <h2 id="abstract-title">Abstract</h2>
+        </div>
+        <p class="abstract">
+          Conversational talking face generation has recently attracted increasing attention, aiming to synthesize interactive talking videos where characters speak, listen, and respond dynamically to each other. This task presents three core challenges: 1) Flexibility: enabling multi-round dialogues with an arbitrary number of participants; 2) Naturalness: maintaining coherent motion and appropriate non-verbal feedback throughout the interaction; and 3) Efficiency: achieving real-time generation and low computation overhead for long-term continuous online conversation. Despite recent advances, existing methods still fall short in balancing all three requirements. To bridge this gap, we introduce InterTalk, a novel and efficient framework designed for highly interactive conversational talking face generation. Built upon a motion-based architecture, InterTalk supports real-time conversation synthesis. Our method achieves strong flexibility by explicitly modeling multi-round conversational dynamics among each participant, eliminating constraints on their numbers. To enhance interactivity, we incorporate motion feedback from multiple participants and introduce an iterative generation strategy for more natural behaviors. Besides, we disentangle motion into several facial components, enabling targeted refinements for natural response such as precise lip-sync and realistic eye-blinking. Finally, we construct a new multi-person conversational dataset and enrich it with 3D face-based data augmentation. Extensive experiments demonstrate that InterTalk achieves superior interaction quality while maintaining real-time performance at 30 FPS.
+        </p>
+      </div>
+    </section>
+
+    <section class="section visual-section framework-section" aria-labelledby="method-title">
+      <div class="container content-width">
+        <div class="section-heading">
+          <p class="eyebrow">InterTalk</p>
+          <h2 id="method-title">Method</h2>
+        </div>
+        <figure class="figure-card">
+          <div class="image-frame">
+            <img src="static/images/framework.png" alt="The InterTalk framework">
+          </div>
+          <figcaption>
+            <strong>Framework of InterTalk.</strong>
+            InterTalk consists of three key components: a Responsive Context Encoder (RCE) that integrates environmental elements into an interactive feature representation; an Interactive Motion Generator (IMG) that produces fluid conversational motions; and a Rendering Pipeline that animates each participant to synthesise the final talking-face videos.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section demo-section" aria-labelledby="demo-title">
+      <div class="container content-width">
+        <div class="section-heading">
+          <p class="eyebrow">InterTalk</p>
+          <h2 id="demo-title">Demo</h2>
+        </div>
+        <div class="video-frame">
+          <video controls playsinline preload="metadata">
+            <source src="static/videos/demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container reading-width">
+      <p>
+        This page was built using the
+        <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>,
+        adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a> project page.
+        You are free to borrow the source code of this website; we only ask that you link back to this page in the footer.
+        This website is licensed under a
+        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

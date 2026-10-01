@@ -1,0 +1,354 @@
+:root {
+  --ink: #eef2ff;
+  --muted: #aab4c8;
+  --blue: #3159d8;
+  --blue-dark: #213d9a;
+  --blue-soft: #9db3ff;
+  --line: #263248;
+  --paper: #0b1220;
+  --background: #080d18;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--background);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.content-width {
+  max-width: 1040px;
+}
+
+.reading-width {
+  max-width: 880px;
+}
+
+.paper-header {
+  position: relative;
+  overflow: hidden;
+  padding: 84px 0 72px;
+  color: #fff;
+  text-align: center;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(107, 137, 255, 0.48), transparent 32%),
+    linear-gradient(135deg, #121b3d 0%, #213d9a 55%, #3159d8 100%);
+}
+
+.header-glow {
+  position: absolute;
+  inset: auto -10% -220px;
+  height: 380px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  transform: rotate(-4deg);
+}
+
+.paper-header .container {
+  position: relative;
+}
+
+.venue {
+  display: inline-block;
+  margin: 0 0 22px;
+  padding: 7px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.13);
+  font-size: 0.9rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  font-size: clamp(2.15rem, 5vw, 4.25rem);
+  font-weight: 780;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.title-tail {
+  white-space: nowrap;
+}
+
+.title-icon {
+  display: inline-block;
+  width: 0.92em;
+  height: 0.92em;
+  margin-left: 0.12em;
+  object-fit: cover;
+  vertical-align: -0.12em;
+}
+
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px 24px;
+  margin: 0 auto 22px;
+  font-size: 1.12rem;
+  font-weight: 620;
+}
+
+.authors a {
+  color: #fff;
+  text-decoration-color: rgba(255, 255, 255, 0.38);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.authors a:hover {
+  text-decoration-color: #fff;
+}
+
+sup {
+  position: relative;
+  top: -0.15em;
+  margin-left: 2px;
+  font-size: 0.64em;
+}
+
+.affiliations {
+  max-width: 900px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.92rem;
+}
+
+.affiliations p {
+  display: inline;
+  margin: 0;
+}
+
+.affiliations p:not(:last-child)::after {
+  content: " · ";
+  padding: 0 5px;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.affiliations .corresponding {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.publication-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.27);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(7, 12, 28, 0.56);
+  font-size: 0.9rem;
+  font-weight: 680;
+  line-height: 1;
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+a.publication-link:hover {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(7, 12, 28, 0.8);
+  transform: translateY(-1px);
+}
+
+.publication-link.is-disabled {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: default;
+}
+
+.section {
+  padding: 76px 0;
+}
+
+.visual-section,
+.demo-section {
+  background: var(--paper);
+}
+
+.hero-visual {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.abstract-section {
+  border-top: 1px solid var(--line);
+  background: #0f1728;
+}
+
+.framework-section,
+.demo-section {
+  border-top: 1px solid var(--line);
+}
+
+.section-heading {
+  margin-bottom: 26px;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: var(--blue-soft);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.video-frame {
+  overflow: hidden;
+  border: 1px solid #2a3851;
+  border-radius: 18px;
+  background: #080b12;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+}
+
+.image-frame {
+  overflow: hidden;
+  border: 1px solid #2a3851;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+}
+
+.image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure-card {
+  margin: 0;
+}
+
+.figure-card figcaption {
+  max-width: 960px;
+  margin: 18px auto 0;
+  color: #aeb9cc;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.98rem;
+  line-height: 1.72;
+  text-align: justify;
+}
+
+.figure-card figcaption strong {
+  color: #eef2ff;
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  max-height: 75vh;
+  background: #080b12;
+}
+
+.abstract {
+  margin: 0;
+  color: #cbd5e1;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.92;
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid #1d2738;
+  color: #8f9bb0;
+  background: #060a12;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #b8c7ff;
+  text-underline-offset: 3px;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .paper-header {
+    padding: 58px 0 52px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .authors {
+    gap: 5px 16px;
+    font-size: 1rem;
+  }
+
+  .affiliations p {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .affiliations p:not(:last-child)::after {
+    content: none;
+  }
+
+  .section {
+    padding: 54px 0;
+  }
+
+  .video-frame {
+    border-radius: 11px;
+  }
+
+  .image-frame {
+    border-radius: 0;
+  }
+
+  .abstract {
+    font-size: 1.02rem;
+    line-height: 1.82;
+    text-align: left;
+  }
+}
