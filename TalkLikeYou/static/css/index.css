@@ -140,6 +140,7 @@ h1 {
 .publication-link {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   min-height: 42px;
   padding: 9px 17px;
   border: 1px solid rgba(255, 255, 255, 0.28);
@@ -151,6 +152,17 @@ h1 {
   line-height: 1;
   text-decoration: none;
   transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.publication-icon {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.publication-icon-emoji {
+  font-size: 18px;
+  line-height: 1;
 }
 
 a.publication-link:hover {
