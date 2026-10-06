@@ -172,6 +172,13 @@ h1 {
   line-height: 1;
 }
 
+.publication-icon-arxiv {
+  padding: 2px;
+  border-radius: 3px;
+  color: #b31b1b;
+  background: #fff;
+}
+
 a.publication-link:hover {
   border-color: rgba(255, 255, 255, 0.58);
   background: rgba(3, 22, 13, 0.8);
