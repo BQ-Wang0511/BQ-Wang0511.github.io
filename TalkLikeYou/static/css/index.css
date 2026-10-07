@@ -212,11 +212,16 @@ a.publication-link:hover {
 .method-section,
 .demo-section,
 .comparison-section,
-.case-section {
+.case-section,
+.streaming-demo-section {
   border-top: 1px solid var(--line);
 }
 
 .comparison-section {
+  background: #0d1b14;
+}
+
+.streaming-demo-section {
   background: #0d1b14;
 }
 
